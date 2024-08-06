@@ -16,9 +16,14 @@
 
 // User data
 
+namespace flow {
+class body;
+}
+
 /// You can define this to inject whatever data you want in b2Body
-struct B2_API b2BodyUserData {
-  std::uint32_t tag{};
+struct B2_API b2BodyUserData
+{
+    flow::body* body_ptr{};
 };
 
 /// You can define this to inject whatever data you want in b2Fixture
